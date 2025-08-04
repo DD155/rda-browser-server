@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IBj9obeu42JdSbtWKSPoTb5h0Pog0s5PV+KTlOySGSA=",
+  "Source": "rda-server",
+  "BasePath": "_content/rda-server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
