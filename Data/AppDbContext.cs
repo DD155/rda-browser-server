@@ -15,8 +15,9 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Account>(entity =>
         {
             entity.ToTable("account");
-            entity.HasKey(e => e.Id);
-            entity.Property(e => e.Email).IsRequired();
+            entity.HasKey(e => e.id);
+            entity.Property(e => e.email).IsRequired();
+            entity.Property(e => e.created_at).ValueGeneratedOnAdd();
         });
     }
 }

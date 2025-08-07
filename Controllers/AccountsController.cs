@@ -31,10 +31,13 @@ public class AccountsController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName(nameof(CreateAccount))]
     public async Task<ActionResult<Account>> CreateAccount(Account acc)
     {
         _context.Accounts.Add(acc);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetAccount), new { id = acc.Id }, acc);
+        return CreatedAtAction(nameof(CreateAccount), new { email = acc.email, first_name = acc.first_name, last_name = acc.last_name }, acc);
     }
+
+    
 }
